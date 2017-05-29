@@ -1,0 +1,153 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+
+    >
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+
+        android:nestedScrollingEnabled="true"
+
+        android:layout_height="match_parent">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+
+            >
+
+
+        <!--suppress AndroidLintContentDescription -->
+        <com.example.xyzreader.ui.DynamicHeightNetworkImageView
+            android:id="@+id/photo"
+            android:background="@color/photo_placeholder"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:transitionName="@string/image_transition_name"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+
+
+            />
+
+
+   <android.support.v7.widget.CardView
+
+       android:id="@+id/mycard"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_marginStart="@dimen/detail_card_side_margin"
+       app:cardElevation="@dimen/cardview_default_elevation"
+       android:layout_marginTop="@dimen/detail_card_top_margin"
+       android:layout_marginEnd="@dimen/detail_card_side_margin">
+
+       <LinearLayout
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+       <LinearLayout
+            android:id="@+id/meta_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_primary"
+            android:layout_gravity="bottom"
+            app:layout_scrollFlags = "scroll"
+
+
+            android:orientation="vertical"
+            android:paddingTop="@dimen/detail_metabar_vert_padding"
+            android:paddingBottom="@dimen/detail_metabar_vert_padding"
+            >
+
+            <TextView
+                android:id="@+id/article_title"
+                style="@style/TextAppearance.AppCompat.Display2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
+                android:textColor="@color/white"
+                android:gravity="start"
+                android:layout_marginLeft="@dimen/detail_title_side_margin"
+                android:layout_gravity="start"
+                android:lineSpacingMultiplier="0.9" />
+
+            <TextView
+                android:id="@+id/article_byline"
+                android:layout_marginLeft="@dimen/detail_title_side_margin"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:alpha=".54"/>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+
+                android:background="@color/white"
+
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/article_body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/detail_body_bottom_margin"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="@dimen/detail_title_side_margin"
+                    android:layout_marginTop="16dp"
+                    android:maxLines="40"
+                    android:lineSpacingMultiplier="1.2"
+                    android:layout_marginRight="@dimen/detail_title_side_margin"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+
+                    />
+
+            </LinearLayout>
+        </FrameLayout>
+
+
+       </LinearLayout>
+   </android.support.v7.widget.CardView>
+</RelativeLayout>
+    </ScrollView>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/share_fab"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:pressedTranslationZ="@dimen/fab_press_translation_z"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        app:fabSize="normal"
+        android:background="@color/theme_accent"
+        android:src="@drawable/ic_share"
+        app:rippleColor="@color/cardview_light_background"
+        app:elevation="@dimen/fab_elevation"
+        android:contentDescription="@string/action_share" />
+
+
+</FrameLayout>

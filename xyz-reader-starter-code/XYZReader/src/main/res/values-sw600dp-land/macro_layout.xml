@@ -1,0 +1,12 @@
+<resources>
+    <!-- detail -->
+    <bool name="detail_is_card">true</bool>
+
+    <dimen name="detail_photo_height">600dp</dimen>
+    <dimen name="detail_card_top_margin">346dp</dimen>
+    <integer name="list_column_count">3</integer>
+
+    <dimen name="detail_card_side_margin">192dp</dimen>
+    <dimen name="list_item_pading_cardview">16dp</dimen>
+    <dimen name="detail_title_side_margin">24dp</dimen>
+</resources>
